@@ -1,0 +1,18 @@
+.home{
+    display: flex;
+
+    .container{
+        flex: 6;
+        
+        .widgets,.chart{
+            padding: 20px;
+            display: flex;
+        }
+
+        .chart{
+            padding: 5px 20px;
+        }
+    }
+
+
+}
