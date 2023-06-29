@@ -4,13 +4,28 @@
     .container{
         flex: 6;
         
-        .widgets,.chart{
+        .widgets,.charts{
             padding: 20px;
             display: flex;
         }
 
-        .chart{
+        .charts{
+            display: flex;
             padding: 5px 20px;
+        }
+
+        .listContainer{
+            margin: 20px;
+            padding: 20px;
+            box-shadow: 7px 10px 11px 0px rgba(146, 146, 146, 0.56);
+            -webkit-box-shadow: 7px 10px 11px 0px rgba(146, 146, 146, 0.56);
+            -moz-box-shadow: 7px 10px 11px 0px rgba(146, 146, 146, 0.56);
+
+            .list-title{
+                font-weight: 500;
+                color: rgb(138, 138, 138);
+                margin-bottom: 15px;
+            }
         }
     }
 

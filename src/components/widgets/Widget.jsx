@@ -36,7 +36,7 @@ const Widget = ({type}) => {
     break;
     case "balance": data={
       title: "BALANCE",
-      isMoney: false,
+      isMoney: true,
       link: "See details",
       icon: (<AccountBalanceIcon className='icon'/>)
     }
