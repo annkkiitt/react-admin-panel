@@ -67,7 +67,7 @@ const Tables = () => {
         <TableHead>
           <TableRow>
             <TableCell className="tablecell">Tracking Id</TableCell>
-            <TableCell className="tablecell">Product)</TableCell>
+            <TableCell className="tablecell">Product</TableCell>
             <TableCell className="tablecell">Customer</TableCell>
             <TableCell className="tablecell">Date</TableCell>
             <TableCell className="tablecell">Amount</TableCell>
@@ -80,7 +80,7 @@ const Tables = () => {
             <TableRow
               key={row.id}
             >
-              <TableCell component="th" scope="row">{row.id}</TableCell>
+              <TableCell className="tablecell" component="th" scope="row">{row.id}</TableCell>
               <TableCell className="tablecell">
                 <div className="cellwrapper">
                     <img src={row.img} alt="..."/>

@@ -8,38 +8,46 @@ import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
 import SsidChartIcon from '@mui/icons-material/SsidChart';
 import LogoutIcon from '@mui/icons-material/Logout';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+import {Link} from 'react-router-dom'
 
 const Sidebar = () => {
   return (
     <div className='sidebar'>
         <div className="top">
-            <span className='logo'>
-                devankit
-            </span>
+            <Link to="/" style={{textDecoration: "none"}} >
+                <span className='logo'>devankit</span>
+            </Link>
         </div>
 
         <div className="center">
             <ul>
                 <p className="title">MAIN</p>
+                <Link to="/" style={{textDecoration: "none"}} >
                 <li>
                     <DashboardIcon className='icons'/>
                     <span>
                     Dashboard
                     </span>
                 </li>
+                </Link>
                 <p className="title">LISTS</p>
+                <Link to="/users" style={{textDecoration: "none"}} >
                 <li>
                     <PersonOutlineOutlinedIcon className='icons'/>
                     <span>
                     Users
                     </span>
                 </li>
+                </Link>
+
+                <Link to="/product" style={{textDecoration: "none"}} >
                 <li>
                     <ProductionQuantityLimitsOutlinedIcon className='icons'/>
                     <span>
                     Products
                     </span>
                 </li>
+                </Link>
                 <li>
                     <ViewStreamOutlinedIcon className='icons'/>
                     <span>
