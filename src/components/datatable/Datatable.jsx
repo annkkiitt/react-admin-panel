@@ -17,7 +17,7 @@ const Datatable = () => {
 
   return (
     <div className='datatable'>
-        <DataGrid
+        <DataGrid className='datagrid'
         rows={userRows}
         columns={userColumns.concat(actionColumn)}
         initialState={{

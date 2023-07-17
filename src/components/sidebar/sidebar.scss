@@ -82,3 +82,9 @@
     }
 
 }
+
+@media screen and (max-width: 40rem){
+    .sidebar{
+        flex: 0.5;
+    }
+}

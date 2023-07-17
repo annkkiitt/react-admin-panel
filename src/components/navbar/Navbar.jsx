@@ -8,31 +8,35 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import SettingsBrightnessIcon from '@mui/icons-material/SettingsBrightness';
+import { useContext } from 'react';
+import { DarkModeContext } from '../context/DarkMode';
 
 const Navbar = () => {
+  const [toggleBtn, settoggleBtn] = useState(true)
+  const {dispatch} = useContext(DarkModeContext)
+  const handleToggle=()=>{
+    dispatch({type: "TOGGLE"})
+    settoggleBtn(!toggleBtn)
+  }
+
   return (
     <div className="navbar">
       <div className="wrapper">
           <div className="search">
             <input type="text" placeholder='Search...' />
-            <SearchIcon />
+            <SearchIcon className='icon-hide'/>
           </div>
           <div className="items">
             <div className="item">
-              <LanguageIcon className='icon'/>
-              English
-            </div>
-            <div className="item">
-              <DarkModeIcon className='icon'/>
+              {toggleBtn ? (<DarkModeIcon className='icon' onClick={handleToggle} />) : (<SettingsBrightnessIcon className='icon' onClick={handleToggle}/>)}
             </div>
             <div className="item">
               <FullscreenExitIcon className='icon'/>
             </div>
             <div className="item">
               <NotificationsIcon className='icon'/>
-            </div>
-            <div className="item">
-              <ChatBubbleOutlineIcon className='icon'/>
             </div>
             <div className="item">
               <ListOutlinedIcon className='icon'/>

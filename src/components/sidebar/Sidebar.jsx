@@ -9,8 +9,11 @@ import SsidChartIcon from '@mui/icons-material/SsidChart';
 import LogoutIcon from '@mui/icons-material/Logout';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import {Link} from 'react-router-dom'
+import { useContext } from 'react';
+import { DarkModeContext } from '../context/DarkMode';
 
 const Sidebar = () => {
+    const {dispatch} = useContext(DarkModeContext);
   return (
     <div className='sidebar'>
         <div className="top">
@@ -110,8 +113,8 @@ const Sidebar = () => {
         </div>
 
         <div className="bottom">
-            <div className="colorOption"></div>
-            <div className="colorOption"></div>
+            <div className="colorOption" onClick={()=> dispatch({type: 'DARK'})}></div>
+            <div className="colorOption" onClick={()=> dispatch({type: 'LIGHT'})}></div>
         </div>
     </div>
   )

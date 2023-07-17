@@ -31,3 +31,30 @@
 
 
 }
+
+@media screen and (max-width: 40rem) {
+    .home{
+        .container{
+            flex: 4;
+        }
+        .widgets,.charts{
+            flex-direction: column;
+            width: 40%;
+        }
+
+        .charts{
+            display: flex;
+        }
+
+        .listContainer{
+            width: 40%;
+            margin: 5px;
+            padding: 8px;
+
+            .list-title{
+                font-weight: 300;
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
