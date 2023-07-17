@@ -1,6 +1,7 @@
 import Home from "./pages/home/Home";
 import {
   BrowserRouter,
+  HashRouter,
   Route,
   Routes,
 } from "react-router-dom";
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <div className={darkmode ? "app dark" : "app"}>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/">
             <Route index element={<Home/>}/>
@@ -31,14 +32,14 @@ function App() {
               <Route path="new" element={<New/>}/>
             </Route>
 
-            <Route path="product">
+            <Route path="/product">
               <Route index element={<List/>}/>
               <Route path=":productId" element= {<Single/>}/>
               <Route path="new" element={<New/>}/>
             </Route>
           </Route>
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
     </div>
   );
 }
